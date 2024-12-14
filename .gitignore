@@ -1,0 +1,4 @@
+.env
+node_modules
+fireBaseconfig.js
+./src/Request.js
