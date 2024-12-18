@@ -2,6 +2,8 @@ import { Route, Routes } from "react-router-dom"
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import Navbar from "./components/navbar"
+import ProtectedLogin from "./components/protectedLogin"
+import { ProtectedRoute } from "./components/ProtectedRoute"
 import TrailerPlayer from "./components/trailerUrl"
 import { AuthContextProvider } from "./context/AuthContext"
 import { TrailerProvider } from "./context/TrailerContext"
@@ -23,9 +25,9 @@ function App() {
           <TrailerPlayer/>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Login />} />
+            <Route path="/login" element={<ProtectedLogin><Login/></ProtectedLogin>} />
             <Route path="/signup" element={<Signup />} />
-            <Route path="/account" element={<Account />} />
+            <Route path="/account" element={<ProtectedRoute><Account /></ProtectedRoute>} />
           </Routes>
         </TrailerProvider>
       </AuthContextProvider>

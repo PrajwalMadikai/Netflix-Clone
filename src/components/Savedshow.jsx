@@ -49,7 +49,7 @@ export const Savedshow = () => {
     <MdChevronLeft onClick={slideLeft} className="bg-white left-0 rounded-full absolute opacity-70 hover:opacity-100 cursor-pointer z-10 hidden group-hover:block" size={40} /> 
     <div id={'slider' } className='w-full h-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide relative  '>
        
-       {movies.map((item,id)=>(
+       {movies?.map((item,id)=>(
        <div key={id} className='w-[160px] sm:w-[200px] md:w-[240px] lg:w-[280px] inline-block cursor-pointer relative p-2'>
               <img
                 className='w-full h-auto block'

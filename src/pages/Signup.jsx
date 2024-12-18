@@ -24,7 +24,7 @@ export const Signup = () => {
                 navigate('/')
             } catch (error) {
              
-               toast.error(`Signup failed: ${error.message}`, {
+               toast.error(`Signup failed`, {
                               position: "top-right",
                               autoClose: 3000,
                               hideProgressBar: true,

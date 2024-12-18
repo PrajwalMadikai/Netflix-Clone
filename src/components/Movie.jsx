@@ -80,7 +80,12 @@ const Movie = ({ item, apiKey }) => {
           <p className="white-space-normal text-xs md:text-sm font-bold flex justify-center items-center h-full text-center">
             {item?.title}
           </p>
-          <p onClick={saveShow}>
+          <p
+            onClick={(e) => {
+              e.stopPropagation(); 
+              saveShow();
+            }}
+          >
             {like ? (
               <FaHeart className="absolute top-4 left-4 text-gray-300" />
             ) : (
